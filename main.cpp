@@ -7,7 +7,7 @@
 
     Obs: To compile run this command on linux terminal:
 
-        g++ -o main main.cpp joystick.cpp icons.cpp screen.cpp 
+        g++ -o main main.cpp icons.cpp screen.cpp 
     than, to execute the program:
 
         ./main
@@ -19,7 +19,6 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-#include "joystick.hpp"
 #include "icons.hpp"
 #include "screen.hpp"
 
@@ -49,11 +48,14 @@ int main()
         << "Direita: 6\n"
         << "Esquerda: 4\n"
         << "Cima: 8\n"
-        << "Baixo: 2\n";
+        << "Baixo: 2\n"
+        << endl
+        << "Digite 0 para sair\n"
+        << endl;
 
-    uint8_t input_val; // user input to simulate joystick
+    uint8_t input_val = 1; // user input to simulate joystick
 
-    while(1)
+    while(input_val)
     {
         cin >> input_val;
         // getchar(); // remove buffer da tecla enter
@@ -75,6 +77,10 @@ int main()
             
             case '2':
                 my_screen1.select_down();
+                break;
+
+            case '0':
+                input_val = 0;
                 break;
 
             default:
