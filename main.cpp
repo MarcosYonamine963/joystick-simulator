@@ -27,13 +27,18 @@ Screen my_screen1;
 
 void setup_screens(void)
 {
-    my_screen1.set_boundary_icon_IDs(logo, clear, settings, sect_3, all_sect);
-    my_screen1.set_boundary_icon_IDs(all_sect, clear, settings, logo, sect_1);
-    my_screen1.set_boundary_icon_IDs(sect_1, clear, settings, all_sect, sect_2);
-    my_screen1.set_boundary_icon_IDs(sect_2, clear, settings, sect_1, sect_3);
-    my_screen1.set_boundary_icon_IDs(sect_3, settings, settings, sect_2, logo);
-    my_screen1.set_boundary_icon_IDs(clear, logo, logo, settings, settings);
-    my_screen1.set_boundary_icon_IDs(settings, logo, logo, clear, logo);
+    my_screen1.set_boundary_icon_IDs(logo,      clear,      settings,   sect_3,     all_sect    );// boundary for icon logo
+    my_screen1.set_boundary_icon_IDs(all_sect,  clear,      settings,   logo,       sect_1      );// boundary for icon all_sect
+    my_screen1.set_boundary_icon_IDs(sect_1,    clear,      settings,   all_sect,   sect_2      );// boundary for icon sect_1
+    my_screen1.set_boundary_icon_IDs(sect_2,    clear,      settings,   sect_1,     sect_3      );// boundary for icon sect_2
+    my_screen1.set_boundary_icon_IDs(sect_3,    settings,   settings,   sect_2,     logo        );// boundary for icon sect_3
+    my_screen1.set_boundary_icon_IDs(clear,     logo,       logo,       settings,   settings    );// boundary for icon clear
+    my_screen1.set_boundary_icon_IDs(settings,  logo,       logo,       clear,      logo        );// boundary for icon settings
+
+
+    /* You can setup positions, as well */
+    my_screen1.set_position(logo, 0, 0); // set position x and y for icon logo
+
 }
 
 int main()

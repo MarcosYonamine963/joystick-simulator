@@ -11,6 +11,8 @@ public:
 
     void set_boundary_icon_IDs(icon_name thisID, icon_name rightID, icon_name leftID, icon_name upID, icon_name downID);
 
+    void set_position(icon_name iconID, uint8_t x, uint8_t y);
+
     void select_right();
     void select_left();
     void select_up();

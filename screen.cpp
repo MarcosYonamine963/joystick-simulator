@@ -33,6 +33,12 @@ void Screen::set_boundary_icon_IDs(icon_name thisID, icon_name rightID, icon_nam
     Screen::icons[thisID].set_boundary_icon_IDs(rightID, leftID, upID, downID);
 }
 
+void Screen::set_position(icon_name iconID, uint8_t x, uint8_t y)
+{
+    Screen::icons[iconID].set_position(x, y);
+}
+
+
 
 void Screen::select_right()
 {
